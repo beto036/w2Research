@@ -1,0 +1,17 @@
+setRetainInstance
+Control whether a fragment instance is retained across Activity re-creation (such as from a configuration change). 
+This can only be used with fragments not in the back stack. 
+If set, the fragment lifecycle will be slightly different when an activity is recreated:
+
+- onDestroy() will not be called (but onDetach() still will be, because the fragment is being detached from its current activity).
+- onCreate(Bundle) will not be called since the fragment is not being re-created.
+- onAttach(Activity) and onActivityCreated(Bundle) will still be called.
+
+getChildFragmentManager()
+Return a private FragmentManager for placing and managing Fragments inside of this Fragment.
+
+A piece of code is thread-safe if it functions correctly during simultaneous execution by multiple threads.”
+
+“In particular, it must satisfy the need for multiple threads to access the same shared data, …”
+
+“…and the need for a shared piece of data to be accessed by only one thread at any given time.”

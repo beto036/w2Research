@@ -1,0 +1,11 @@
+Android Libraries
+The video explains some libraries that we can use when developing a new app. The speaker talks about Butter Knife, Gson, Picasso, Retrofit, Dart and Hanson. 
+These are very handy libraries and you can use them all together. You can save a lot of coding lines and do a lot of things and improve the performance all 
+along the way. Butter Knife helps you to avoid writing findById millions of times. Gson helps you to convert JSON to Java Objects and vice versa. Retrofit 
+allows you to make http calls synchronously and asynchronously and work whit GSON and Picasso at the same time. Finally you have Dart and Hanson which help you
+to start an activity with extras without calling the put extras method. Great!
+
+Dependendy Injection
+The speaker talks about dependency injection which let you use dependencies that was already created when you are runnig your app. He talked about Dagger
+that is a library that allows you to use dependency injection in android using annotated classes. He didn't explained so much about using it in android but
+gave you a very useful general view on how does it works. Injection dependency improves the performance of the app because you already have the instances created.
