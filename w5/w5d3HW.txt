@@ -1,0 +1,58 @@
+VOLATILE KEYWORD
+The Java volatile keyword guarantees visibility of changes to variables across threads.
+All writes to the volatile variable will be written back to main memory immediately. Also, all reads of the
+variable will be read directly from main memory.Declaring a variable volatile thus guarantees the visibility 
+for other threads of writes to that variable.
+
+SYNCHRONIZED KEYWORD
+A synchronized block in Java is synchronized on some object. All synchronized blocks synchronized on the same object can only 
+have one thread executing inside them at the same time. All other threads attempting to enter the synchronized block are 
+blocked until the thread inside the synchronized block exits the block.
+
+The synchronized keyword can be used to mark four different types of blocks:
+
+   -- Instance methods
+   -- Static methods
+   -- Code blocks inside instance methods
+   -- Code blocks inside static methods
+   -- These blocks are synchronized on different objects. Which type of synchronized block you need depends on the concrete situation.
+
+TRANSIENT KEYWORD
+It marks a member variable not to be serialized when it is persisted to streams of bytes. When an object is transferred through the network, 
+the object needs to be 'serialized'. Serialization converts the object state to serial bytes. Those bytes are sent over the network and the 
+object is recreated from those bytes. Member variables marked by the java transient keyword are not transferred, they are lost intentionally.
+
+MAPS, LIST, SETS
+
+Duplicate Objects
+Main difference between List and Set interface in Java is that List allows duplicates while Set doesn't allow duplicates. 
+Map  holds two object per Entry e.g. key and value and It may contain duplicate values but keys are always unique.
+
+Order
+Another key difference between List and Set is that List is an ordered collection, List's contract maintains insertion order or element. 
+Set is an unordered collection, you get no guarantee on which order element will be stored. 
+
+Null elements
+List allows null elements and you can have many null objects in a List, because it also allowed duplicates. Set just allow one null element as 
+there is no duplicate permitted while in Map you can have null values and at most one null key. 
+
+ARRAYLIST VS LINKEDLIST
+1) Search: ArrayList search operation is pretty fast compared to the LinkedList search operation. get(int index) in ArrayList gives the performance of O(1) 
+while LinkedList performance is O(n).
+
+2) Deletion: LinkedList remove operation gives O(1) performance while ArrayList gives variable performance: O(n) 
+in worst case (while removing first element) and O(1) in best case (While removing last element).
+
+3) Inserts Performance: LinkedList add method gives O(1) performance while ArrayList gives O(n) in worst case. Reason is same as explained for remove.
+
+4) Memory Overhead: ArrayList maintains indexes and element data while LinkedList maintains element data and two pointers for neighbor nodes hence 
+the memory consumption is high in LinkedList comparatively
+
+CONCURRENT PACKAGE (CONCURRENT HASHMAP, ATOMIC VARIABLES)
+This package contains a set of classes that makes it easier to develop concurrent (multithreaded) applications in Java. Before this package was added, 
+you would have to program your utility classes yourself.
+
+ConcurrentHashMap is thread-safe that is the code can be accessed by single thread at a time. ConcurrentHashMap synchronizes or locks on 
+the certain portion of the Map . To optimize the performance of ConcurrentHashMap , Map is divided into different partitions depending
+upon the Concurrency level . So that we do not need to synchronize the whole Map Object. ConcurrentHashMap does not allow NULL values . 
+So the key can not be null in ConcurrentHashMap.
